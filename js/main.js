@@ -28,10 +28,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const diceSound = document.getElementById('dice-sound');
     const resultSound = document.getElementById('game-end');
 
-    const bgSound = document.getElementById('bg-sound');
-    bgSound.volume = 0.2;
-    bgSound.play();
-
     let playerTotalScore = 0;
     let computerTotalScore = 0;
     let roundCount = 0;
@@ -149,4 +145,12 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+
+    // BGM::
+    document.addEventListener('click', function() {
+        const bgSound = document.getElementById('bg-sound');
+        bgSound.volume = 0.3;
+        bgSound.play();
+    }, { once: true });
+
 });
